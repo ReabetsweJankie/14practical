@@ -24,5 +24,37 @@ public class HashExperiment{
         data[i] = new KeyValue(String.valueOf(list.get(i)), String.valueOf(i+1));
     }
     //comment 3
+    public static void main(String[]args){
+        prepareData();
+        System.out.println("Load\tOpen\tChained");
+        or(int load = 75; load<=95; load+=5){
+            int n = Data_SIZE *load/100;
+
+            long open = testOpen(n);
+            long chained = testChained(n);
+            System.out.println(load + "%\t" + open + "\t" + chained);
+        }
+    }
+    static long testOpe(int n){
+        long total =0;
+        for(int r=0; r<RUNS; r++){
+            OpenHash = new OpenHash(M);
+            for(int i =0; int<n; i++)
+            h.insert(data[i].key, data[i].value)
+
+            long start = System.nanoTime();
+
+            for(int i =0; i<1000; i++)
+            h.lookup(data[i].key);
+            long end = System.nanoTime();
+            total = (end-start);
+            urn total/RUNS;
+            //comment 4
+        }
+    }
+
+        }
+
+    }
     }
 }
