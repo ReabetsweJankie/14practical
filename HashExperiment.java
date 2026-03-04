@@ -50,6 +50,27 @@ public class HashExperiment{
             total = (end-start);
             urn total/RUNS;
             //comment 4
+            static long testChained(int n){
+                long total =0;
+                for(int r =0; r<RUNS; r++){
+                    ChainedHash h =new ChainedHash(M);
+
+                    for(int i=0; i<n; i++)
+                    h.insert(data[i].key, data[i].value);
+                    
+                    long start= System.nanoTime();
+
+                    for(int i =0; i<1000; i++)
+                    h.lookup(data[i].key);
+
+                    long end = System.nanoime();
+
+                    total += (end - start);
+                }
+                return total/Runs;
+                //comment 6
+                }
+            }
         }
     }
 
